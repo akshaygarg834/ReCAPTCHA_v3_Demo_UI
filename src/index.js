@@ -15,22 +15,30 @@ class App extends React.Component {
     message: ""
   };
   loginHandler = async e => {
-    try {
-      const token = await Utils.getReCaptchaToken();
-      let registrationResponse = await Utils.registration(token, {});
-      if (registrationResponse.score < 0.5)
-        this.setMessage(
-          `You are a robot ! Motherfucker (${registrationResponse.score})`,
-          "error"
-        );
-      else
-        this.setMessage(
-          `Login successful ! (${registrationResponse.score})`,
-          "success"
-        );
-    } catch (error) {
-      this.setMessage(error.toString(), "error");
-    }
+    Utils.getReCaptchaToken()
+      .then(token => {
+        Utils.registration(token, {})
+          .then(registrationResponse => {
+            if (registrationResponse.score < 0.5)
+              this.setMessage(
+                `You are a robot ! Motherfucker (${
+                  registrationResponse.score
+                })`,
+                "error"
+              );
+            else
+              this.setMessage(
+                `Login successful ! (${registrationResponse.score})`,
+                "success"
+              );
+          })
+          .catch(error => {
+            this.setMessage(error.toString(), "error");
+          });
+      })
+      .catch(error => {
+        this.setMessage(error.toString(), "error");
+      });
   };
   setMessage = (message, variant) => {
     this.setState({
