@@ -10,7 +10,7 @@ import Status from "./SnackBarWrapper";
 
 const styles = theme => ({
   container: {
-    marginTop: theme.spacing.unit * 8,
+    marginTop: theme.spacing.unit * 14,
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
