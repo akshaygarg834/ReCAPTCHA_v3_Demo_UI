@@ -1,9 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
-// import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles";
 import Login from "./Login";
 import Utils from "./utils";
+import "babel-polyfill";
 
 class App extends React.Component {
   constructor(props) {

@@ -1,15 +1,8 @@
 {
   "presets": [
-    "env"
+    "@babel/preset-react"
   ],
   "plugins": [
-    "@babel/plugin-proposal-class-properties",
-    "transform-runtime",
-    [
-      "transform-react-jsx",
-      {
-        "pragma": "React.createElement"
-      }
-    ]
+    "@babel/plugin-proposal-class-properties"
   ]
 }
