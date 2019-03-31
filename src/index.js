@@ -29,7 +29,7 @@ class App extends React.Component {
           "success"
         );
     } catch (error) {
-      this.setMessage(error.toString(), "error");
+      this.setMessage("Unknown error occurred :( ! ", "error");
     }
   };
   setMessage = (message, variant) => {
