@@ -44,14 +44,15 @@ const Login = props => {
   const classes = props.classes;
   return (
     <main className={classes.main}>
-      <Paper className={classes.container} square>
-        <Avatar className={classes.avatar}>
-          <AccountCircle />
-        </Avatar>
-        <Typography component="h1" variant="h5">
-          Sign in
-        </Typography>
-        <form>
+      <form>
+        <Paper className={classes.container} square>
+          <Avatar className={classes.avatar}>
+            <AccountCircle />
+          </Avatar>
+          <Typography component="h1" variant="h5">
+            Sign in
+          </Typography>
+
           <TextField
             id="outlined-name"
             label="Name"
@@ -87,8 +88,8 @@ const Login = props => {
           >
             Login
           </Button>
-        </form>
-      </Paper>
+        </Paper>
+      </form>
       <Status
         open={props.open}
         onClose={props.toggleSnackBar}
