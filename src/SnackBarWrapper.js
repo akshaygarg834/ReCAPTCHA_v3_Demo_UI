@@ -53,7 +53,7 @@ function MySnackbarContent(props) {
     <Snackbar
       anchorOrigin={{
         vertical: "bottom",
-        horizontal: "right"
+        horizontal: "left"
       }}
       open={props.open}
       onClose={props.onClose}

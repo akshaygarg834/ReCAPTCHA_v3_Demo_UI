@@ -11,8 +11,8 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  z-index: -1;
 }
 #root {
   position: absolute;
+  z-index: 1;
 }
