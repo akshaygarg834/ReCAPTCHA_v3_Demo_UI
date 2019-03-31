@@ -51,40 +51,43 @@ const Login = props => {
         <Typography component="h1" variant="h5">
           Sign in
         </Typography>
-        <TextField
-          id="outlined-name"
-          label="Name"
-          margin="normal"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true
-          }}
-          placeholder="Enter your email"
-          fullWidth
-        />
-        <TextField
-          id="outlined-password-input"
-          label="Password"
-          type="password"
-          autoComplete="current-password"
-          margin="normal"
-          variant="outlined"
-          InputLabelProps={{
-            shrink: true
-          }}
-          placeholder="Enter your password"
-          fullWidth
-        />
-        <Button
-          variant="outlined"
-          size="small"
-          color="primary"
-          className={classes.button}
-          onClick={props.loginHandler}
-          id="login"
-        >
-          Login
-        </Button>
+        <form>
+          <TextField
+            id="outlined-name"
+            label="Name"
+            margin="normal"
+            variant="outlined"
+            InputLabelProps={{
+              shrink: true
+            }}
+            placeholder="Enter your email"
+            fullWidth
+            autoComplete="current-user"
+          />
+          <TextField
+            id="outlined-password-input"
+            label="Password"
+            type="password"
+            autoComplete="current-password"
+            margin="normal"
+            variant="outlined"
+            InputLabelProps={{
+              shrink: true
+            }}
+            placeholder="Enter your password"
+            fullWidth
+          />
+          <Button
+            variant="outlined"
+            size="small"
+            color="primary"
+            className={classes.button}
+            onClick={props.loginHandler}
+            id="login"
+          >
+            Login
+          </Button>
+        </form>
       </Paper>
       <Status
         open={props.open}
