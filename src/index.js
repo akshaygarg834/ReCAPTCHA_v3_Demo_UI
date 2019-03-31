@@ -20,7 +20,7 @@ class App extends React.Component {
       let registrationResponse = await Utils.registration(token, {});
       if (registrationResponse.score < 0.5)
         this.setMessage(
-          `You are a robot ! Motherfucker (${registrationResponse.score})`,
+          `You are a robot ! (${registrationResponse.score})`,
           "error"
         );
       else
