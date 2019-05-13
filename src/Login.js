@@ -86,7 +86,7 @@ const Login = props => {
             onClick={props.loginHandler}
             id="login"
           >
-            Login
+            Login !
           </Button>
         </Paper>
       </form>
